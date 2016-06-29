@@ -11,7 +11,7 @@ public class Config {
         try {
             url = new URL("https://dl.dropboxusercontent.com/u/231329/xyzreader_data/data.json" );
         } catch (MalformedURLException ignored) {
-            // TODO: throw a real error
+            throw new RuntimeException("Invalid url");
         }
 
         BASE_URL = url;
